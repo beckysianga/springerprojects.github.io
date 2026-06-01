@@ -42,9 +42,6 @@ Traditional centralized machine learning requires collecting patient data into o
 - Clipping bounds change according to update distributions
 ## 6. RDP Accounting
 - Rényi Differential Privacy is used for tighter privacy accounting
-
----
-
 # Framework Architecture
 | Component | Purpose |
 |---|---|
@@ -66,13 +63,15 @@ Traditional centralized machine learning requires collecting patient data into o
 ## 3. Glioma Grading Dataset
 - More stable sensitivity dynamics
 - Used to evaluate personalized learning under strong privacy preservation
-# Repository Structure
-├── cervical_cancer_colab_ready.py
-├── diabetes_colab_ready.py
-├── glioma_grading_colab_ready.py
+# Repository Structure 
+```text
+├── SpringerCervicalCancerDataset.ipynb
+├── SpringerDiabetesDataset.ipynb
+├── SpringerGliomaDataset.ipynb
 ├── README.md
 ├── requirements.txt
-└── outputs/
+└── outputs/# Repository Structure
+
 Key Features of the Implementation
 The implementation includes:
 •	Multi-seed experimentation
