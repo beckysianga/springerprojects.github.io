@@ -72,8 +72,7 @@ Traditional centralized machine learning requires collecting patient data into o
 ├── requirements.txt
 └── outputs/# Repository Structure
 
-Key Features of the Implementation
-The implementation includes:
+Key Features of the Implementation. The implementation includes:
 •	Multi-seed experimentation
 •	Federated client simulation
 •	Non-IID Dirichlet partitioning
@@ -86,6 +85,7 @@ The implementation includes:
 •	Statistical evaluation
 •	Confidence intervals
 •	Privacy fairness verification
+
 The codebase supports reproducible experiments across multiple healthcare datasets.
 Experimental Configuration
 Parameter	Value
@@ -97,6 +97,7 @@ Dirichlet Alpha	0.5
 Random Seeds	42, 52, 62
 Differential Privacy Delta	1e-5
 The implementation uses adaptive clipping and adaptive privacy scheduling during training.
+
 Ablation Studies
 Ablation	Description
 A1	Adaptive clipping only
@@ -104,6 +105,7 @@ A2	Adaptive clipping + adaptive budgeting
 A3	Adaptive clipping + adaptive budgeting + adaptive sensitivity
 A4	Full PR-AS-HDP framework
 The ablation studies help isolate the contribution of each framework component.
+
 Evaluation Metrics
 The framework evaluates:
 •	Accuracy
@@ -112,6 +114,7 @@ The framework evaluates:
 •	F1-score
 •	AUPRC (Area Under Precision Recall Curve)
 AUPRC is emphasized because healthcare datasets are often highly imbalanced.
+
 Key Research Findings
 The experiments showed that:
 •	Privacy–utility behaviour is highly dataset-dependent
@@ -120,6 +123,7 @@ The experiments showed that:
 •	Adaptive mechanisms improve convergence stability
 •	Differential privacy impacts datasets differently
 •	Sensitivity dynamics influence performance more than the nominal privacy budget
+
 Running the Codes
 Install Dependencies
 pip install numpy pandas scikit-learn matplotlib torch scipy ucimlrepo
@@ -129,6 +133,7 @@ Run Diabetes Experiments
 python diabetes_colab_ready.py
 Run Glioma Experiments
 python glioma_grading_colab_ready.py
+
 Outputs Generated
 The framework automatically generates:
 •	Validation histories
@@ -138,6 +143,7 @@ The framework automatically generates:
 •	Confidence intervals
 •	Privacy fairness statistics
 •	AUPRC convergence plots
+
 Privacy Mechanisms
 Local Differential Privacy (LDP)
 Noise is added locally before client updates are transmitted.
@@ -150,6 +156,7 @@ Sensitivity is estimated dynamically using:
 •	Class imbalance
 RDP Accounting
 Privacy loss is accumulated across communication rounds using Rényi Differential Privacy accounting.
+
 Intended Use
 This repository is intended for:
 •	Federated learning research
@@ -158,6 +165,7 @@ This repository is intended for:
 •	Privacy-preserving machine learning
 •	Graduate and PhD research
 •	Experimental benchmarking
+
 Citation
 If you use this repository in your research, please cite:
 @article{okaka2026prashdp,
@@ -165,14 +173,16 @@ If you use this repository in your research, please cite:
   author={Okaka, Rebecca Adhiambo and Karanja, Evanson Mwangi and Oteyo, Isaac Nyabisa},
   year={2026}
 }
+
 Author
 Rebecca Adhiambo Okaka
-Research Areas
+Research Areas:
 •	Federated Learning
 •	Differential Privacy
 •	Privacy-Preserving AI
 •	Healthcare Machine Learning
 •	Adaptive Privacy Mechanisms
+
 Acknowledgements
 This work builds upon research in:
 •	Federated Learning
